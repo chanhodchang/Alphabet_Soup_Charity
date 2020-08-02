@@ -1,5 +1,6 @@
 # Alphabet_Soup_Charity
 ![Charity](Images/charity.png)
+
 Using deep-learning Neural Networks to determine which charities are likely to be a success donation.
 
 ## Project Overview
@@ -14,6 +15,18 @@ There were a lot of messy data in the charity_data.csv file. Each data value had
 The target variable for the model was the 'IS_SUCCESSFUL' column.
 The features were 'APPLICATION_TYPE', 'CLASSIFICATION', 'USE_CASE', 'ORGANIZATION', 'STATUS', 'INCOME_AMT', 'SPECIAL_CONSIDERATIONS', and 'ASK_AMT'.
 The variables that were removed were 'EIN' and 'NAME' because these values had too many unique values and were not import to the analysis.
+
+![Charity](Images/app_plt.png)
+
+- Looking at the APPLICATION_TYPE graph, there is a higher density of values with the unique count from 0 to 10000. The graph can help visualize which values need to be joined to make the a less congested encoded dataframe.
+
+![Charity](Images/class_plt.png)
+
+- CLASSIFICATION graph displays much more significant spike in unique values between 0 to 2500. This means that those values can really congest an encoded dataset which means that the columns should be grouped into one column.
+
+![Charity](Images/ask_plt.png)
+
+- The ASK_AMT graph shows that most of the unique values fall under 10 per column and that there is a skewed data at over 25000 unique values in one column. This data set was organized using bins to help separate the different unique columns.
 
 Several of the rare data in the categorical columns were bucketed so the encoding would not be too overwhelmed. 
 All the categorical variables were then encoded using the one-hot encoder.
