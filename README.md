@@ -1,4 +1,5 @@
 # Alphabet_Soup_Charity
+![Charity](Images/charity.png]
 Using deep-learning Neural Networks to determine which charities are likely to be a success donation.
 
 ## Project Overview
